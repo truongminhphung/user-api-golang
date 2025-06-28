@@ -17,3 +17,5 @@ A RESTful API for managing user data, built with Go, Gin, and GORM.
 - **Language**: Go 1.23
 - **Framework**: Gin
 - **ORM**: GORM
+- **Database**: MySQL 9.3
+- **Containerization**: Docker

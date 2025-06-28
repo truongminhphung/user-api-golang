@@ -1,15 +1,15 @@
 version: '3.9'
 services:
   user-api:
-  container_name: user_api
-  build:
-    context: .
-    dockerfile: Dockerfile
-    restart: always
-  depends_on:
-    - mysql
-  ports:
-    - "8000:8000"
+    container_name: user_api
+    build:
+      context: .
+      dockerfile: Dockerfile
+      restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "8000:8000"
   
   mysql:
     image: mysql:9.3.0

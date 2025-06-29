@@ -4,4 +4,6 @@ dev:
 	go run ${APP_NAME}
 
 docker_up:
-	docker compose -f docker-compose.yml up -d
+	docker compose -f docker-compose.yml up
+docker_down:
+	docker compose -f docker-compose.yml down --remove-orphans

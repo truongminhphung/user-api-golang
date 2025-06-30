@@ -6,5 +6,7 @@ func Run() *gin.Engine {
 	// Load configuration
 	LoadConfig()
 
-	return gin.Default()
+	r := InitRouter()
+
+	return r
 }

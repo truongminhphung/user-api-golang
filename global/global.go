@@ -3,10 +3,13 @@ package global
 import (
 	"user-api/pkg/logger"
 	"user-api/pkg/setting"
+
+	"gorm.io/gorm"
 )
 
 // Global configuration variable
 var (
-	Config setting.Config
-	Logger *logger.LoggerZap
+	Config setting.Config    // Config is the global variable for the application configuration
+	Logger *logger.LoggerZap // Logger is the global variable for the logger instance
+	Mdb    *gorm.DB          // Mdb is the global variable for the MySQL database connection
 )

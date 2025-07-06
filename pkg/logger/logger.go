@@ -53,10 +53,10 @@ func NewLoggerZap(config setting.LoggerSetting) *LoggerZap {
 }
 
 func getEncoderLog() zapcore.Encoder {
-	encode_config := zap.NewProductionEncoderConfig()
-	encode_config.EncodeTime = zapcore.ISO8601TimeEncoder
-	encode_config.TimeKey = "time"
-	encode_config.LevelKey = "level"
+	encodeConfig := zap.NewProductionEncoderConfig()
+	encodeConfig.EncodeTime = zapcore.ISO8601TimeEncoder
+	encodeConfig.TimeKey = "time"
+	encodeConfig.LevelKey = "level"
 
-	return zapcore.NewJSONEncoder(encode_config)
+	return zapcore.NewJSONEncoder(encodeConfig)
 }

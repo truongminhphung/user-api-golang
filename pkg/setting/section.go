@@ -14,7 +14,7 @@ type ServerSetting struct {
 type MySQLSetting struct {
 	Host            string `mapstructure:"host"`
 	Port            int    `mapstructure:"port"`
-	UserName        string `mapstructure:"user"`
+	UserName        string `mapstructure:"username"`
 	Password        string `mapstructure:"password"`
 	Dbname          string `mapstructure:"dbname"`
 	MaxIdleConns    int    `mapstructure:"max_idle_conns"`

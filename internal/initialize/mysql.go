@@ -18,7 +18,7 @@ func panicIfError(err error, errString string) {
 }
 
 // InitMySQL initializes the MySQL database connection using configuration from global.Config,
-// sets up the connection pool, and assigns the database instance to global.Mdb.
+// sets up the connection pool, and assigns the database instance to global.MySQLDB.
 // It panics if the connection cannot be established.
 func InitMySQL() {
 	m := global.Config.Mysql
@@ -28,7 +28,7 @@ func InitMySQL() {
 	db, err := gorm.Open(mysql.Open(s), &gorm.Config{})
 	panicIfError(err, "Failed to connect to database")
 	global.Logger.Info("Connected to MySQL database successfully")
-	global.Mdb = db
+	global.MySQLDB = db
 
 	SetPool()
 }
@@ -37,7 +37,7 @@ func InitMySQL() {
 // max open connections, and connection max lifetime based on the application's configuration.
 func SetPool() {
 	m := global.Config.Mysql
-	sqlDb, err := global.Mdb.DB()
+	sqlDb, err := global.MySQLDB.DB()
 	panicIfError(err, "Failed to get database instance")
 	sqlDb.SetMaxIdleConns(m.MaxIdleConns)
 	sqlDb.SetMaxOpenConns(m.MaxOpenConns)

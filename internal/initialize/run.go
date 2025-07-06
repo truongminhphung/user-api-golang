@@ -11,6 +11,7 @@ func Run() *gin.Engine {
 	LoadConfig()
 	InitLogger()
 	global.Logger.Info("Initialized logger successfully.")
+	InitMySQL()
 
 	r := InitRouter()
 	global.Logger.Info("Initialized router successfully.")

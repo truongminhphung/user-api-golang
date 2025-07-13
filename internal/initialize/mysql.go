@@ -6,6 +6,8 @@ import (
 	"time"
 	"user-api/global"
 
+	_ "github.com/go-sql-driver/mysql"
+
 	"go.uber.org/zap"
 )
 

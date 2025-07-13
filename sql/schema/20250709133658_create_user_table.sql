@@ -14,9 +14,7 @@ CREATE TABLE users (
     deleted_at TIMESTAMP DEFAULT NULL,
 
     -- Indexes
-    INDEX idx_users_email (email),
-    INDEX idx_users_status (status),
-    INDEX idx_users_phone (phone)
+    INDEX idx_users_status (status)
 );
 -- +goose StatementEnd
 

@@ -1,6 +1,6 @@
 APP_NAME = ./cmd/server/main.go
 GOOSE_DRIVER ?= mysql
-GOOSE_DBSTRING ?= "root:root1234@tcp(127.0.0.1:3306)/user_db"
+GOOSE_DBSTRING ?= root:root1234@tcp(127.0.0.1:3306)/user_db
 GOOSE_MIGRATION_DIR ?= sql/schema
 
 dev:
